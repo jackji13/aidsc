@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Consola';
+  src: url('assets/fonts/consola.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Consola';
+  src: url('assets/fonts/consolab.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  text-align: justify;
+  font-family: 'Consola', sans-serif;
+}
+
+.text-container {
+  padding: 15px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12pt;
+  color: #17f700;
+  background-color: #000000;
+  animation: container 1s ease;
+}
+
+@keyframes container {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+h1 {
+  padding-bottom: 10px;
+}
+
+a {
+  margin-top: 15px;
+  padding: 5px;
+  font-size: 16pt;
+  color: #17f700;
+  background-color: #000000;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  animation: container 1s 2s ease both;
+}
+
+a:hover {
+  background-color: #17f700;
+  color: #ffffff;
+}
