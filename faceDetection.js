@@ -92,7 +92,7 @@ async function detectFaceInVideo(video) {
             for (const [expression, probability] of Object.entries(expressions)) {
                 textContent += `  - ${expression}: ${(probability * 100).toFixed(2)}%\n`;
 
-                if (probability > 0.9 && !imageDisplayed) {
+                if (probability > 0.8 && !imageDisplayed) {
                     showEmotionImage(expression);
                     imageDisplayed = true;
                 }
@@ -116,10 +116,10 @@ function showEmotionImage(emotion) {
         const imageElement = document.createElement('img');
         imageElement.src = randomImage;
         imageElement.style.position = 'absolute';
-        imageElement.style.width = '150px';
-        imageElement.style.height = 'auto';
-        imageElement.style.bottom = '20px';
-        imageElement.style.right = '20px';
+        imageElement.style.width = '20%';
+        imageElement.style.height = '20%';
+        imageElement.style.bottom = '10px';
+        imageElement.style.right = '10px';
         imageElement.style.zIndex = '10';
 
         const imageContainer = document.getElementById('image-gallery');
@@ -129,7 +129,7 @@ function showEmotionImage(emotion) {
             if (imageContainer.contains(imageElement)) {
                 imageContainer.removeChild(imageElement);
             }
-        }, 500);
+        }, 700);
     }
 }
 
